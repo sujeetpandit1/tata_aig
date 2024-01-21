@@ -42,6 +42,7 @@ export const product_validation = try_and_catch_handler(async (req: Request, res
 });
 
 export const get_product = async (query: any): Promise<Product[]> => {
+  try{
     const pipeline = [];
 
     // Match stage for filtering
@@ -70,6 +71,10 @@ export const get_product = async (query: any): Promise<Product[]> => {
     // console.log(products);
     
     return products;
+  } catch (error) {
+    console.error("Error in get_product:", error);
+    throw new Error("Error fetching products");
+}
 };
 
 export const update_product = async (req: Request, res: Response, product_id: any, update_data: any): Promise<Product | null> => {
