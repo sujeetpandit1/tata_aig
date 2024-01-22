@@ -1,8 +1,8 @@
-import { NextFunction, Request, Response } from 'express';
-import { OrderModel, Order } from '../models/order.model';
+import { Request, Response } from 'express';
+import { OrderModel } from '../models/order.model';
 import { CartModel } from '../../cart/models/cart.model';
 import { send_error_response } from '../../../errors_handler/api_error';
-import mongoose, { Types } from 'mongoose';
+import mongoose from 'mongoose';
 import api_response from '../../../errors_handler/api_response';
 import { validate_fields, validate_string } from '../../../errors_handler/validation';
 import { ProductModel } from '../../product/models/product.model';
@@ -162,7 +162,7 @@ export const cancel_order_and_update_product_s = async (req: Request, res: Respo
     const objectIdProductId = new mongoose.Types.ObjectId(product_id);
   
     // Update product quantity in the database
-    const data = await ProductModel.findOneAndUpdate(
+    await ProductModel.findOneAndUpdate(
       { _id: objectIdProductId },
       { $inc: { stock: quantity } }, // Increment the quantity by the cancelled quantity
       { new: true }

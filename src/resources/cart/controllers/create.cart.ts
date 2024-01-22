@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Request } from 'express';
 import try_and_catch_handler from '../../../errors_handler/try_catch_handler';
 import {add_to_cart_service} from '../services/cart.services';
 

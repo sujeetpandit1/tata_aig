@@ -1,5 +1,3 @@
-import { Response } from 'express';
-
 class api_error extends Error {
     status_code: number;
     data: null;
@@ -31,7 +29,6 @@ class api_error extends Error {
 
 function send_error_response(res: any, code: number, message: string) {
     const error = new api_error(code, message);
-    // console.error(error);
     res.status(code).json({
         status: "failed",
         message: error.message,
