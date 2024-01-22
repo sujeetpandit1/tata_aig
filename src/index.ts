@@ -5,7 +5,7 @@ import Product_Routes from "./resources/product/routes/product.routes"
 import User_Routes from "./resources/users/routes/user.routes"
 import Order_Routes from "./resources/orders/routes/order.routes"
 import Cart_Routes from "./resources/cart/routes/cart.routes"
-import Review_Routes from "./resources/reviews/routes/review.toutes"
+import Review_Routes from "./resources/reviews/routes/review.routes"
 import { db } from "./db_config/db_config";
 
 require('dotenv').config();
@@ -13,7 +13,6 @@ require('dotenv').config();
 
 const app = express();
 
-// app.use(cors());
 app.use(express.json());
 const port = process.env.PORT || 3000;
 

@@ -12,8 +12,7 @@ const router = express.Router();
     router.post('/createReview', auth, review_validation, create_review );
     router.post('/updateReview', auth, review_validation, update_review );
     router.post('/listReview', auth, review_validation, get_product_ratings_byid);
-    // router.post('/updateProduct', update_products);
-    // router.post('/deleteProduct', delete_product);
+
 
   
   export default router;

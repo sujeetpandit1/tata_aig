@@ -1,6 +1,5 @@
 
 import { Request, Response } from 'express';
-import try_and_catch_handler from '../../../errors_handler/try_catch_handler';
 import api_response from '../../../errors_handler/api_response';
 import { get_product } from '../services/product.services';
 
