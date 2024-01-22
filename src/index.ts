@@ -5,6 +5,7 @@ import Product_Routes from "./resources/product/routes/product.routes"
 import User_Routes from "./resources/users/routes/user.routes"
 import Order_Routes from "./resources/orders/routes/order.routes"
 import Cart_Routes from "./resources/cart/routes/cart.routes"
+import Review_Routes from "./resources/reviews/routes/review.toutes"
 import { db } from "./db_config/db_config";
 
 require('dotenv').config();
@@ -32,6 +33,7 @@ app.use('/api/product', Product_Routes);
 app.use('/api/user', User_Routes);
 app.use('/api/order', Order_Routes);
 app.use('/api/cart', Cart_Routes);
+app.use('/api/review', Review_Routes);
 
 // Global error handler middleware
 app.use((err: any, _req: Request, res: Response, next: NextFunction) => {

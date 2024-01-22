@@ -6,6 +6,7 @@ export interface User extends Document {
   password: string;
   first_name: string;
   last_name: string;
+  products_reviewed: Schema.Types.ObjectId[];
 }
 
 const userSchema: Schema = new Schema({
@@ -14,6 +15,7 @@ const userSchema: Schema = new Schema({
   password: { type: String, required: true },
   first_name: { type: String, required: true },
   last_name: { type: String, required: true },
+  products_reviewed: [{ type: Schema.Types.ObjectId, ref: 'Review' }],
 
 }, {timestamps: true});
 
