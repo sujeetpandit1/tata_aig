@@ -11,10 +11,10 @@ import { db } from "./db_config/db_config";
 require('dotenv').config();
 
 
-const app = express();
+export const app = express();
 
 app.use(express.json());
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 //DB Connect
 db();
