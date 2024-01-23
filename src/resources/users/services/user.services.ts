@@ -32,7 +32,7 @@ export const user_validation = try_and_catch_handler(async (req: Request, res: R
         }
         let check_username = await UserModel.findOne({username: req.body.username});
         if(check_username){
-            return res.status(400).json(new api_response(undefined, 'User Name Already Exist', ""));
+            return send_error_response(res, 400,  'User Name Already Exist');
         }
     }
 
@@ -66,7 +66,7 @@ export const user_validation = try_and_catch_handler(async (req: Request, res: R
     }
     let check_email = await UserModel.findOne({ email: req.body.email });
     if (check_email) {
-        return res.status(400).json(new api_response(undefined, 'Email Already Exist', ""));
+        return send_error_response(res, 400,  'Email Already Exist');
     }
     }
 
