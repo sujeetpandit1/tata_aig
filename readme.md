@@ -162,3 +162,35 @@ src/
 ### JEST test
 --test created for product and users only
 1. To run test `npm run test` or `npm run --detectOpenHandles`
+
+--Test Result
+ Product API
+    √ should create a new product (2216 ms)                
+    √ should return an error if any field is missing (6 ms)
+    √ should get a list of products (106 ms)               
+    √ should update the product (179 ms)                   
+    √ should delete the product (103 ms)                   
+  Users API                                                
+    √ should create a new user (352 ms)                    
+    √ should return an error if any field is missing (6 ms)
+    √ should login with valid credentials (147 ms)         
+    √ should delete the user after login (85 ms)           
+  Cart API                                                 
+    √ should create a new product (100 ms)                 
+    √ should create a new user (339 ms)                    
+    √ should login with valid credentials (192 ms)         
+    √ should product add to cart existing user (757 ms)    
+    √ should product delete the product (203 ms)           
+    √ should delete the user after login (207 ms)          
+  order API                                                
+    √ should create a new product (107 ms)                 
+    √ should create a new user (504 ms)                    
+    √ should login with valid credentials (161 ms)         
+    √ should product add to cart existing user (658 ms)    
+    √ should create order existing cart and user (717 ms)  
+    √ should get a list of orders (408 ms)                 
+    √ should get a list of orders by specific id (515 ms)  
+    √ should update orders by specific id (303 ms)         
+    √ should cancel orders by specific id (614 ms)         
+    √ should product delete the product (208 ms)           
+    √ should delete the user after login (199 ms)

@@ -5,3 +5,4 @@ import { cancel_order_and_update_product_s } from "../services/order.services";
 export const cancel_orders = try_and_catch_handler(async (req: Request, res: Response) => {
     await cancel_order_and_update_product_s(req, res)
 });
+
